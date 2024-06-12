@@ -1,0 +1,627 @@
+/* Custom CSS for Slider Section */
+
+/* Section 1 - Image Slider */
+.slider-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.image-slide.active {
+  opacity: 1;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  z-index: 1;
+}
+
+.description h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.registration-button {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-button:hover {
+  background-color: #e64a19;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.slider-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.slider-button.left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.slider-button.right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.dot-navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ff5722;
+}
+/* Section 5 - Welcome Section */
+.welcome-section {
+  background-color: #f7f7f7; /* Background color for Welcome Section */
+  text-align: center;
+  padding: 40px 0; /* Adjust padding as needed */
+}
+
+.welcome {
+  margin: 0; /* Remove any margin */
+  text-align: center;
+  background-color: #fff; /* Background color for the text container */
+}
+
+.welcome h1 {
+  font-size: 36px; /* Header 1 font size */
+  margin-bottom: 10px; /* Spacing below header */
+  color: #333; /* Header text color */
+}
+
+.welcome p {
+  font-size: 18px; /* Paragraph font size */
+  color: #555; /* Paragraph text color */
+  margin-bottom: 0; /* Remove margin below paragraph */
+}
+
+/* Section 6 - Vision Section */
+.vision-section {
+  padding: 40px 0; /* Adjust padding as needed */
+  background-color: #09c5cc; /* Background color for Vision Section */
+  text-align: center;
+}
+
+/* Featured Container styles for Vision Section */
+.vision-section .featured-container {
+  text-align: center;
+  background-color: #ffffff; /* Background color for the container */
+  border: 1px solid #ccc; /* Add a border to the container */
+  padding: 30px; /* Add padding to the container */
+  border-radius: 10px; /* Add border radius to the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow to the container */
+  width: 100%; /* Make each container full-width on smaller screens */
+  margin: 10px 0; /* Add space between containers */
+}
+
+/* Center icon and h3, hide ul initially */
+.vision-section .featured-container h3 {
+  margin: 0;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.vision-section .featured-container svg {
+  margin: 0 auto;
+  font-size: 36px;
+  color: #01050a;
+}
+
+/* Show ul text on hover */
+.vision-section .featured-container ul {
+  display: none;
+}
+
+.vision-section .featured-container:hover {
+  background-color: #cf0a4c; /* Change background color on hover */
+  box-shadow: 0 0 20px rgb(126, 8, 8); /* Add a stronger box shadow on hover */
+  transform: translateY(-5px); /* Add a slight lift on hover */
+  text-align: justify;
+  color: white;
+}
+
+.vision-section .featured-container:hover ul {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Add space between icon and text */
+.vision-section .featured-container h3 + ul {
+  list-style: disc; /* Add bullet points */
+  padding-left: 20px; /* Adjust spacing for bullet points */
+  font-size: small;
+}
+/* Styles for the socials section */
+.socials-section {
+  background-color: #f2f2f2;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-item {
+  flex: 1;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 400px; /* Optional: Set a maximum width for the social items */
+}
+.instagram-content {
+  padding: 16px;
+}
+
+.instagram-content a {
+  background: #FFFFFF;
+  line-height: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+
+.instagram-content .icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.instagram-content .avatar {
+  background-color: #F4F4F4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 14px;
+}
+
+.instagram-content .status-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.instagram-content .status-bar {
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  height: 14px;
+}
+
+.instagram-content .status-bar.large {
+  width: 100px;
+  margin-bottom: 6px;
+}
+
+.instagram-content .status-bar.small {
+  width: 60px;
+}
+
+.instagram-content .padding-div {
+  padding: 19% 0;
+}
+
+.instagram-content .image-container {
+  display: block;
+  height: 50px;
+  margin: 0 auto 12px;
+  width: 50px;
+}
+
+.instagram-content svg {
+  width: 50px;
+  height: 50px;
+}
+
+
+/* Make only two social items appear in full width on screens smaller than 768px */
+@media (max-width: 768px) {
+  .social-item {
+    flex-basis: 100%;
+  }
+}
+
+.social-item:hover {
+  transform: translateY(-5px);
+}
+.icon {
+  font-size: 36px;
+  color: #00bcd4;
+}
+
+.embedded-content {
+  margin-top: 20px;
+}
+
+/* Make sure embedded content is contained within the social item */
+.embedded-content iframe {
+  max-width: 100%;
+}
+/* Facebook */
+.fb-post {
+  iframe {
+    max-width: 100%;
+  }
+}
+
+/* Twitter */
+.twitter-feed {
+  blockquote {
+    font-size: 16px;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/* YouTube */
+.youtube-video {
+  iframe {
+    max-width: 100%;
+  }
+}
+
+/* TikTok */
+.tiktok-video {
+  iframe {
+    max-width: 100%;
+  }
+}
+/* Styles for the testimonial section */
+.trstimonial-section {
+  background-color: #fff; /* Set your desired background color */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonials {
+  margin-top: 30px;
+}
+
+.testimonial {
+  background-color: white; /* Set testimonial background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.quote-icon {
+  font-size: 24px;
+  color: #00bcd4; /* Set your desired quote icon color */
+}
+
+.avatar img {
+  max-width: 100px; /* Set the maximum width for avatar images */
+  border-radius: 50%;
+  caret-color: transparent;
+}
+
+.testimonial-info {
+  font-size: 14px;
+  color: #777; /* Set testimonial info text color */
+}
+
+/* Newsletter Section */
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+  padding: 50px 0; /* Adjust padding as needed */
+}
+
+#newsletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+#newsletter p span {
+  color: #ffbd27;
+}
+
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input {
+  height: 3.125rem;
+  padding: 0.5rem 1.25em; /* Adjust padding as needed */
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+  background-color: #088178;
+  color: #fff;
+  padding: 0.5rem 1.25em; /* Adjust padding as needed */
+  font-size: 14px;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#newsletter button:hover {
+  background-color: #065d57; /* Adjust hover color as needed */
+}
+
+/* Newsletter Section */
+#newsletter1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+  padding: 50px 0; /* Adjust padding as needed */
+}
+
+#newsletter1 h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter1 p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+#newsletter1 p span {
+  color: #ffbd27;
+}
+
+#newsletter1 .form {
+  display: flex;
+  width: 40%;
+}
+
+#newsletter1 input {
+  height: 3.125rem;
+  padding: 0.5rem 1.25em; /* Adjust padding as needed */
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter1 button {
+  background-color: #088178;
+  color: #fff;
+  padding: 0.5rem 1.25em; /* Adjust padding as needed */
+  font-size: 14px;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#newsletter1 button:hover {
+  background-color: #065d57; /* Adjust hover color as needed */
+}
+
+/* CSS for the email input field */
+.form input[type="text"] {
+  height: 3.125rem;
+  padding: 1rem 1.25rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* CSS for the invalid email input field */
+.form input[type="text"].invalid {
+  border-color: #dc3545; /* Red border color for invalid input */
+}
+
+/* CSS for the validation error message */
+.error-message {
+  color: #dc3545; /* Red color for the error message */
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+
+@media (min-width: 769px) {
+  #newsletter1 {
+    display: none;
+  }
+}
+/* Additional styles for testimonials and other sections can be added as needed */
+/* Media Query for Small Devices (e.g., Mobile) */
+@media (max-width: 768px) {
+  /* Hide Left and Right Slide Arrows */
+  .slider-button.left,
+  .slider-button.right {
+    display: none;
+  }
+
+  /* Reduce Description Font Size and Button Size */
+  .description {
+    padding: 10px;
+  }
+
+  .description h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .registration-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  /* Adjust font sizes and padding for smaller screens */
+  .welcome h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .welcome p {
+    font-size: 16px;
+  }
+  /* Featured Container styles for Vision Section on smaller screens */
+  .vision-section .featured-container {
+    width: 100%; /* Make each container full-width */
+    margin: 10px 0; /* Add space between containers */
+    text-align: center; /* Center text within the container */
+    background-color: #fff; /* Background color for the container */
+    border: 1px solid #ccc; /* Add a border to the container */
+    padding: 15px; /* Add padding to the container */
+    border-radius: 10px; /* Add border radius to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow to the container */
+  }
+
+  .vision-section .featured-container h3 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin-bottom: 5px;
+  }
+
+  .vision-section .featured-container svg {
+    font-size: 30px; /* Adjust icon size for smaller screens */
+  }
+
+  .vision-section .featured-container ul {
+    list-style: disc; /* Add bullet points for smaller screens */
+    padding-left: 20px; /* Adjust spacing for bullet points */
+  }
+
+  .embedded-content {
+    max-width: 100%; /* Ensure embedded content stays within its parent container */
+    overflow: hidden; /* Hide any overflow content */
+  }
+
+  #newsletter1 .newstext h4 {
+    font-size: 18px; /* Reduce font size for smaller devices */
+  }
+
+  #newsletter1 .newstext p {
+    font-size: 12px; /* Reduce font size for smaller devices */
+  }
+
+  #newsletter1 .form {
+    width: 100%; /* Make the form full width */
+    margin-top: 20px; /* Add margin to separate from text */
+  }
+
+  #newsletter.section-p1.section-m1 {
+    display: none;
+  }
+}

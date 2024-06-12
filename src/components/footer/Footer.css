@@ -1,0 +1,88 @@
+/* Footer Container */
+.footer-container {
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  /* Footer Logo */
+  .footer-logo img {
+    width: 100px; /* Adjust the logo width as needed */
+  }
+  
+  /* Footer Contact */
+  .footer-contact h4 {
+    font-size: 14px; /* Updated font size */
+    margin-top: 20px;
+  }
+  
+  /* Footer Contact Information */
+  .footer-contact p {
+    font-size: 12px; /* Updated font size */
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Sunday Services and Mid Week Services */
+  .footer-col h4 {
+    font-size: 16px; /* Updated font size */
+    margin-top: 20px;
+  }
+  
+  /* Footer Service Times */
+  .footer-col p {
+    font-size: 12px; /* Updated font size */
+    margin-bottom: 5px;
+  }
+  
+  /* Footer Install App */
+  .footer-install-app h4 {
+    font-size: 14px; /* Updated font size */
+    margin-top: 20px;
+  }
+  
+  /* Footer App Store Images */
+  .footer-store-images img {
+    width: 120px; /* Adjust image width as needed */
+    margin-right: 10px;
+  }
+  
+  /* Footer Follow Us */
+  .footer-follow h4 {
+    font-size: 14px; /* Updated font size */
+    margin-top: 20px;
+  }
+  
+  /* Footer Social Icons */
+  .footer-icon-container a {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom p {
+    font-size: 12px; /* Updated font size */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .footer-logo img {
+      width: 80px; /* Adjust logo width for smaller screens */
+    }
+  
+    /* Add more responsive styles as needed */
+    .footer-col {
+      text-align: center; /* Center-align columns on smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .footer-install-app h4,
+    .footer-follow h4 {
+      margin-top: 10px; /* Reduce top margin on smaller screens */
+    }
+  }
+  

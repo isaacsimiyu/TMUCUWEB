@@ -1,0 +1,68 @@
+/* Gallery.css */
+  
+/* Gallery Section */
+.christian-union-images {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of images */
+  }
+  
+  .christian-union-images .container {
+    display: inline-block; /* Display images in a horizontal line */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .christian-union-images img {
+    max-width: 100%; /* Set a maximum width for each image */
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-right: 20px; /* Adjust the margin between images */
+  }
+  
+  .christian-union-images img:last-child {
+    margin-right: 0; /* Remove margin from the last image */
+  }
+  
+  .christian-union-images img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Google Drive Link Section */
+  .google-drive-link {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .google-drive-link p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .google-drive-link a {
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .google-drive-link a:hover {
+    text-decoration: underline;
+  }
+        /* Styles for large devices (desktops, laptops, etc.) */
+  @media (min-width: 768px) {
+   /* Increase font size and padding for medium screens */
+   .section-with-image h1 {
+    font-size: 48px;
+  }
+
+  .christian-union-images {
+    padding: 60px 0; /* Adjust padding for medium screens */
+  }
+  
+    /* Additional styles for large screens */
+  }
+
+  

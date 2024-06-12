@@ -1,0 +1,400 @@
+/* Style the section with a fixed height */
+.section-with-image {
+  position: relative;
+  background-image: url("../../assets/images/bckgr1.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  /* margin-top: 10px; */
+  height: 40px;
+  color: #fff;
+  padding: 20px 0; /* Adjust padding */
+}
+
+/* Style the heading inside the section */
+.section-with-image h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  font-size: 20px;
+}
+
+/* Style the Focus Kenya Section */
+.focus-kenya {
+  background-color: #fff;
+  padding: 20px; /* Adjust padding */
+}
+
+/* Container styles */
+.focus-kenya .container {
+  display: flex;
+  flex-direction: column; /* Stack columns on smaller screens */
+  align-items: center; /* Center-align columns horizontally */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px; /* Limit the container width */
+}
+
+/* Focus Info styles */
+.focus-kenya .focus-info {
+  display: flex;
+  flex-direction: column; /* Stack columns on smaller screens */
+  align-items: center; /* Center-align columns horizontally */
+  text-align: center;
+}
+
+.focus-kenya h2 {
+  font-size: 24px;
+  margin: 10px 0; /* Adjust margins for spacing */
+}
+
+/* Focus Info Image styles */
+.focus-kenya .focus-info img {
+  max-width: 50%;
+  height: auto; /* Ensure the image scales properly */
+  transition: transform 0.3s; /* Add a transform transition for hover effect */
+  max-height: 150px; /* Limit the max height of the image */
+  margin: 10px 0; /* Adjust margin for spacing */
+}
+
+.focus-kenya .focus-info img:hover {
+  transform: scale(1.1); /* Enlarge image on hover */
+}
+
+/* Focus Info Description styles */
+.focus-kenya .focus-info-description {
+  max-width: 100%; /* Full width for description on smaller screens */
+  padding: 20px;
+  text-align: center; /* Center-align text */
+}
+
+.focus-kenya .focus-info-description h2 {
+  font-size: 24px;
+  margin: 10px 0; /* Adjust margins for spacing */
+}
+
+.focus-kenya .focus-info-description p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0; /* Adjust margins for spacing */
+  text-align: justify; /* Justify-align the paragraph text */
+  line-height: 1.8; /* Adjust line height for spacing between lines */
+  word-spacing: 2px;
+}
+
+.focus-kenya .focus-info-description a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  padding: 8px 15px;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+  }
+}
+
+/* Events.css */
+
+/* Styling for the white background of the section */
+.upcoming-events {
+  background-color: white;
+  padding: 20px; /* Add padding to create space around the cards */
+}
+/* Styling for the custom card with a white background */
+.custom-card {
+  background-color: white;
+  border: none; /* Remove the border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  margin-bottom: 20px; /* Add margin to create space between the cards */
+}
+.card:first-child {
+  background-color: white;
+}
+/* Styling for the event cards */
+.event-card {
+  background-color: white; /* Set the background color to white */
+  border: none; /* Remove the border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  margin-bottom: 20px; /* Add margin to create space between the cards */
+}
+
+/* Styling for the event image */
+.event-image {
+  width: 100%; /* Make sure the image fills the card width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the event title */
+.event-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styling for the event description */
+.event-description {
+  font-size: 1rem;
+  padding: 10px;
+}
+/* Additional styles can be added as needed */
+
+/* Students Section */
+.students {
+    background-color: #f0f0f0;
+    padding: 40px; /* Adjust padding */
+  }
+  
+  .students .container {
+    display: flex;
+    flex-direction: row; /* Arrange columns horizontally */
+    justify-content: space-between; /* Create space between columns */
+    align-items: center; /* Vertically align columns */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  .students .two-column-wrapper {
+    flex-basis: 45%; /* Adjust width of the wrapper */
+    display: flex;
+    flex-direction: row; /* Arrange columns horizontally */
+    justify-content: space-between; /* Create space between columns */
+    align-items: center; /* Vertically align columns */
+  }
+  
+  .students .focus-description {
+    flex-basis: 45%; /* Adjust width of the description column */
+    padding-right: 20px; /* Add right padding to separate from the image */
+  }
+  
+  .students .focus-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .students .focus-description p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Adjust line height for better readability */
+    letter-spacing: 0.5px; /* Add letter spacing for a subtle effect */
+    word-spacing: 2px; /* Adjust word spacing for a subtle effect */
+  }
+  
+  .students .focus-description a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    border: 2px solid #007bff; /* Add a border for the button */
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Add border radius for a rounded button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  
+    /* Additional styles for hover effect */
+    &:hover {
+      background-color: #007bff; /* Change background color on hover */
+      color: #fff; /* Change text color on hover */
+    }
+  }
+  
+  .students .students-image {
+    flex-basis: 45%; /* Adjust width of the image column */
+    position: relative; /* Add position for overlay effect */
+    padding-left: 20px; /* Add left padding to separate from the text */
+  }
+  
+  .students .students-image img {
+    max-width: 100%; /* Ensure the image fits within the column */
+    max-height: 350px; /* Set max height for the image */
+    width: auto; /* Allow the image to expand its width */
+    height: auto; /* Allow the image to expand its height */
+    transition: transform 0.3s; /* Smooth hover transition */
+  
+    /* Hover effect for the image */
+    &:hover {
+      transform: scale(1.05); /* Scale the image on hover */
+    }
+  }
+  
+  /* Harambee Section */
+  .harambee {
+    background-color: #f0f0f0;
+    padding: 20px; /* Adjust padding */
+  }
+  
+  .harambee .container {
+    display: flex;
+    flex-direction: row; /* Arrange columns horizontally */
+    justify-content: space-between; /* Create space between columns */
+    align-items: center; /* Vertically align columns */
+  }
+  
+  .harambee-image {
+    flex-basis: 45%; /* Adjust width of the image column */
+  }
+  
+  .harambee-image img {
+    max-width: 100%; /* Ensure the image fits within the column */
+    max-height: 350px; /* Set max height for the image */
+    width: auto; /* Allow the image to expand its width */
+    height: auto; /* Allow the image to expand its height */
+  }
+  
+  .harambee-description {
+    flex-basis: 45%; /* Adjust width of the description column */
+  }
+  
+  .harambee-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .harambee-description h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6; /* Adjust line height for better readability */
+    letter-spacing: 0.5px; /* Add letter spacing for a subtle effect */
+    word-spacing: 2px; /* Adjust word spacing for a subtle effect */
+  }
+  
+  .harambee-description p, h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6; /* Adjust line height for better readability */
+    letter-spacing: 0.5px; /* Add letter spacing for a subtle effect */
+    word-spacing: 2px; /* Adjust word spacing for a subtle effect */
+  }
+  
+  .harambee-description a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    border: 2px solid #007bff; /* Add a border for the button */
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Add border radius for a rounded button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  
+    /* Additional styles for hover effect */
+    &:hover {
+      background-color: #007bff; /* Change background color on hover */
+      color: #fff; /* Change text color on hover */
+    }
+  }
+  
+
+/* Responsive Styles for Smaller Devices */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .section-with-image {
+    padding: 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Allow section to adjust its height */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  }
+
+  .section-with-image h1 {
+    font-size: 24px; /* Reduce font size for smaller screens */
+  }
+  .focus-kenya h2 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .focus-kenya .focus-info img {
+    max-height: 90px; /* Reduce max height for smaller screens */
+  }
+
+  .focus-kenya .focus-info-description h2 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .focus-kenya .focus-info-description p {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+  .upcoming-events {
+    padding: 20px 10px; /* Add 10px padding on both sides */
+  }
+
+  .upcoming-events h3 {
+    font-size: 20px;
+  }
+
+  /* For smaller screens, stack event cards vertically */
+  .upcoming-events .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Allow section to adjust its height */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  }
+
+  /* Adjust the event card's width for smaller screens */
+  .upcoming-events .event {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  /* Adjust the button padding for smaller screens */
+  .upcoming-events .event-description .read-more {
+    padding: 8px 15px;
+    margin: 10px 0;
+  }
+  .students .container,
+  .harambee .container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center-align columns horizontally */
+    padding: 10px; /* Add padding to all sides */
+  }
+
+  .students .two-column-wrapper {
+    flex-basis: 100%; /* Full width for smaller screens */
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center-align columns horizontally */
+    padding: 0; /* Remove padding */
+  }
+
+  .students .focus-description,
+  .harambee-description {
+    flex-basis: 100%; /* Full width for smaller screens */
+    padding: 10px; /* Add padding to all sides */
+    text-align: center; /* Center-align text */
+  }
+
+  .students .focus-description h2,
+  .harambee-description h2 {
+    font-size: 20px; /* Reduce font size */
+    margin-bottom: 10px;
+  }
+
+  .students .focus-description p,
+  .harambee-description p {
+    font-size: 14px; /* Reduce font size */
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4; /* Adjust line height */
+    letter-spacing: 0.5px; /* Add letter spacing for a subtle effect */
+    word-spacing: 2px; /* Adjust word spacing for a subtle effect */
+  }
+
+  .students .focus-description a,
+  .harambee-description a {
+    margin-top: 10px; /* Add margin at the top of the button */
+    padding: 8px 15px; /* Adjust button padding */
+  }
+
+  .students .students-image img,
+  .harambee-image img {
+    max-height: 250px; /* Reduce max height for smaller screens */
+  }
+
+}

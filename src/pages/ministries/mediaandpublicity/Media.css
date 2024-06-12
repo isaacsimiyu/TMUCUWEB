@@ -1,0 +1,61 @@
+/* Media Gallery */
+.image-card {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Card Overlay (Description) */
+  .image-card .card-title {
+    position: absolute;
+    bottom: 50%; /* Vertically center the description */
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    transform: translateY(100%); /* Initially, hide the description below the image */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+    visibility: hidden; /* Initially, hide the description */
+    opacity: 0; /* Initially, make the description transparent */
+    font-size: 16px; /* Set the text size to 16px */
+    font-family: "Poppins", sans-serif; /* Set the font family to "Poppins" */
+  }
+  
+  /* Show description on hover */
+  .image-card:hover .card-title {
+    transform: translateY(0); /* Show the description on hover */
+    visibility: visible; /* Make the description visible on hover */
+    opacity: 1; /* Make the description fully visible on hover */
+  }
+  
+/* For screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  /* Make the rows flex containers with column layout */
+  .description-section > .row {
+    flex-direction: column;
+  }
+
+  /* Make the columns full width and stacked */
+  .description-section .col {
+    width: 100%;
+  }
+
+  /* Add spacing between the columns */
+  .description-section .col + .col {
+    margin-top: 10px;
+  }
+  .image-card {
+    width: 100%; /* Make each image card 100% width */
+    margin-bottom: 10px; /* Add spacing between the images */
+  }
+
+  .image-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-card .card-title {
+    transform: translate(-50%, -50%);
+  }
+}

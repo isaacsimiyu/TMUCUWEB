@@ -1,0 +1,60 @@
+/* Users.css */
+
+.users-page {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .users-content {
+    margin-left: 90px; /* Adjust the margin as needed */
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .search-icon {
+    margin-right: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  .search-container {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .search-placeholder {
+    display: flex;
+    align-items: center;
+    color: #aaa; /* Placeholder text color */
+  }
+  

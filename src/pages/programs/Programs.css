@@ -1,0 +1,84 @@
+/* Programs.css */
+  
+  /* Style for the individual program */
+  .program {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 15px;
+    background-color: #fff; /* Background color for program containers */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .program img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .program-description {
+    margin-top: 10px;
+  }
+  
+  .program-description h4 {
+    font-size: 20px;
+  }
+  
+  .program-description p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+    /* font-family: 'Times New Roman', Times, serif; */
+  }
+  
+  /* Style for the "Read more" button */
+  .program-description button {
+    margin-top: 10px;
+    background-color: #007bff; /* Button background color */
+    border: none;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .program-description button:hover {
+    background-color: #0056b3; /* Hover state color */
+  }
+  
+  /* Style for the background image in the header */
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    background-color: #000; /* Background color for overlay */
+  }
+  
+  /* Media query for small devices */
+  @media (max-width: 768px) {
+    /* Adjust styles for small devices here */
+    .section-with-image h1 {
+      font-size: 24px;
+    }
+  
+    .program {
+      padding: 10px;
+    }
+  
+    .program-description h4 {
+      font-size: 18px;
+    }
+  
+    .program-description p {
+      font-size: 14px;
+    }
+  
+    .program-description button {
+      padding: 5px 10px;
+    }
+  }
+  

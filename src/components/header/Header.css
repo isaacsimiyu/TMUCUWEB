@@ -1,0 +1,272 @@
+/* Section 1: Logo, Institution Name, Contact, and Button */
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+}
+/* Container for Logo, Institution Name, Contact, and Register Button */
+.logo-name-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Create a gap of 20px between child elements */
+  background-color: white; /* Background color for the container */
+  color: black; /* Text color for the container */
+  width: 100vw; /* Fill the whole viewport width */
+}
+/* Logo and Institution Name Container */
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+/* Logo */
+.logo {
+  width: 70px;
+  height: auto;
+  caret-color: transparent;
+}
+
+/* Institution Info Container */
+.institution-info {
+  text-align: left;
+}
+
+/* Institution Name Text */
+.institution-name {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Contact Email Container */
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  justify-content: center;
+}
+
+/* Contact Email Links */
+.contact-email a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.contact-email a:hover {
+  color: #e71d36;
+}
+
+/* Register Button Container */
+.register-btn-container {
+  margin-right: 20px;
+}
+
+/* Register Button */
+.register-btn {
+  background-color: #e71d36;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  margin-right: 20px; /* Added margin-right to 20px */
+}
+
+.register-btn:hover {
+  background-color: #c1192b;
+}
+
+/* Section 2: Navbar */
+.section-2 {
+  background-color: #014b84;
+  color: #ffffff;
+  text-align: right;
+  padding-right: 600px;
+  font-family: "", sans-serif;
+}
+.custom-center-navbar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+}
+
+/* Navbar Toggle Icon */
+.navbar-toggler-icon {
+  color: #ffffff;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 20px;
+  text-decoration: none; /* Remove underline */
+  padding: 0; /* Reset padding */
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #e71d36;
+}
+
+/* Navbar Dropdown Links */
+.navbar-nav .dropdown-item {
+  color: #ffffff;
+  font-size: 10px;
+  padding: 10px 20px;
+  text-align: right;
+  background-color: #014b84;
+}
+/* Add styles for left-aligned dropdowns */
+/* Force left alignment for dropdown menus */
+.left-aligned-dropdown .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #e71d36;
+}
+
+/* Update submenu styles */
+.submenu {
+  background-color: #014b84;
+  color: #ffffff;
+  width: auto;
+  text-align: right;
+}
+
+/* Update submenu links styles */
+.submenu a {
+  color: #ffffff;
+  text-align: right;
+  padding: 30px 60px;
+  font-size: 14px;
+  background-color: #014b84;
+}
+
+/* Update submenu hover effect */
+.submenu a:hover {
+  background-color: #e71d36;
+}
+
+/* Update dropdown arrow styles */
+.navbar-nav .arrow {
+  left: auto;
+  right: 10px;
+  font-size: 12px;
+}
+
+/* Mobile Menu Icon */
+.navbar-toggler {
+  color: #ffffff;
+}
+
+/* Mobile Menu Container */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 50px;
+  background-color: #014b84;
+  color: #ffffff;
+  padding: 0 20px;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  z-index: 102;
+}
+
+/* Mobile Menu Text */
+.mobile-menu p {
+  color: white;
+  margin: 0;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+}
+
+/* Show the menu icon */
+.mobile-menu .navbar-toggler-icon {
+  display: block;
+  align-self: flex-end;
+  margin: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Adjust the margin for the section */
+@media (max-width: 768px) {
+  .section-1 {
+    justify-content: flex-start;
+    padding: 10px 5px; /* Updated padding for smaller devices */
+  }
+
+  .logo-name {
+    margin-left: 5px; /* Updated margin-left to 5px */
+  }
+
+  .institution-name {
+    font-size: 14px; /* Reduced font size for smaller devices */
+  }
+
+  .contact-email,
+  .register-btn {
+    display: none;
+  }
+
+  /* Logo and Institution Name fill the entire space */
+  .logo-name {
+    margin-left: 30px;
+  }
+
+  .section-2 {
+    text-align: left; /* Align text to the left */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 20px; /* Adjust padding for mobile devices */
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: flex;
+  }
+
+  /* Change the menu icon to a cross */
+  .mobile-menu .navbar-toggler-icon {
+    display: none;
+  }
+
+  /* Slide in from right to left */
+  .menu-open .section-2 {
+    display: flex;
+    margin-right: 0; /* Adjust margin to zero for mobile menu */
+  }
+
+  /* Header.css */
+
+  .navbar-brand {
+    color: white !important; /* Set the text color to white */
+    padding-left: 10px; /* Add left padding */
+  }
+
+  .navbar-toggler-icon {
+    color: white !important; /* Set the color of the Navbar toggler icon to white */
+  }
+}
+@media (min-width: 769px) {
+  .navbar-brand{
+    display: none;
+  }
+}
