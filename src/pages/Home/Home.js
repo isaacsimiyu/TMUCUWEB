@@ -257,7 +257,7 @@ const Home = () => {
                     <div className="fb-post">
                       <iframe
                         src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftommboyaunicu%2Fposts%2Fpfbid034ZDGbfyH1EZ9qPT6VAwXfB9HZ5GAKGnWyiBx9Y9nq2SGFeQJSw4rEQhAArUzesSvl&show_text=true&width=500"
-                        width="60"
+                        width="85"
                         height="105"
                         style={{
                           border: "none",
@@ -333,7 +333,7 @@ const Home = () => {
                     {/* Replace with your actual YouTube video iframe */}
                     <div className="youtube-video">
                       <iframe
-                        width="60"
+                        width="85"
                         height="105"
                         src="https://www.youtube.com/embed/tFNTEGgti1k?si=tHK6UR09bPitetlp"
                         title="YouTube video player"
@@ -369,7 +369,7 @@ const Home = () => {
                     {/* Replace with your actual tiktok video iframe */}
                     <div className="tiktok-video">
                       <iframe
-                        width="65"
+                        width="85"
                         height="105"
                         src="https://www.tiktok.com/@tmu_cu"
                         title="Tiktok video player"

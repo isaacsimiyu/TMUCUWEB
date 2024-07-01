@@ -17,6 +17,9 @@ import image12 from "../../assets/tmucu/galery/gl12.JPG";
 import image13 from "../../assets/tmucu/galery/gl13.JPG";
 import image14 from "../../assets/tmucu/galery/gl14.JPG";
 import image15 from "../../assets/tmucu/galery/gl15.JPG";
+import image16 from "../../assets/tmucu/galery/gl16.jpg";
+import image17 from "../../assets/tmucu/galery/gl17.jpg"
+import image18 from "../../assets/tmucu/galery/gI18.jpg"
 import Footer from "../../components/footer/Footer";
 // Import more image files as needed
 
@@ -82,6 +85,18 @@ const Gallery = () => {
             </Col>
             <Col xs={12} sm={6} md={4}>
               <Image src={image15} alt="Image 15" fluid />
+            </Col>
+            
+            <Col xs={12} sm={6} md={4}>
+              <Image src={image16} alt="Image 16" fluid />
+            </Col>
+            
+            <Col xs={12} sm={6} md={4}>
+              <Image src={image17} alt="Image 17" fluid />
+            </Col>
+            
+            <Col xs={12} sm={6} md={4}>
+              <Image src={image18} alt="Image 18" fluid />
             </Col>
             
             {/* Add more images as needed */}

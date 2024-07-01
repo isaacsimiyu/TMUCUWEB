@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import API from "../../API/axios";
 import "./RegistrationForm.css";
 
+
 const REGISTER_URL = "http://localhost:3500/api/register";
 const USER_REGEX = /^[a-zA-Z\s]+$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -125,7 +126,7 @@ const RegistrationForm = () => {
     } catch (error) {
       console.error(error);
       if (!error?.response) {
-        setError("No Server Response");
+        setError("System under Maintanance");
       } else if (error.response?.status === 409) {
         setError("Username Taken");
       } else {
