@@ -59,8 +59,10 @@ const Header = () => {
             >
               Register
             </button>
+            </div>
+            <div className="login-btn-container">
             <button
-              className="register-btn"
+              className="login-btn"
               onClick={() => handleNavigation("/login")}
             >
               Login

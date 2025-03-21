@@ -4,8 +4,8 @@ import "./LoginForm.css";
 import API from "../../API/axios";
 
 const LOGIN_URL = "/api/login";
-// Define the admin page URL here
 const ADMIN_PAGE_URL = "/admin";
+const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
 
 const LoginForm = () => {
   const emailInputRef = useRef(null);
@@ -15,6 +15,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
+  const [passwordError, setPasswordError] = useState(""); // State for Password Error
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -24,12 +25,22 @@ const LoginForm = () => {
     };
   }, []);
 
+  const validatePassword = () => {
+    if (!PASSWORD_REGEX.test(password)) {
+      setPasswordError("Password must be at least 8 characters long and contain at least one letter and one number");
+    } else {
+      setPasswordError("");
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!email || !password) {
-      setErrMsg("Please enter both email and password");
+    validatePassword();
+
+    if (!email || !password || passwordError) {
+      setErrMsg("Please enter both email and password and ensure password is valid");
       setLoading(false);
 
       setTimeout(() => {
@@ -73,7 +84,6 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
     <div className="login">
       <form className="login-form-container" onSubmit={handleSubmit}>
         <h1>Welcome Back</h1>
@@ -92,20 +102,20 @@ const LoginForm = () => {
           value={password}
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
-          className="input-field"
+          onBlur={validatePassword}
+          className={`input-field ${passwordError ? "error" : ""}`}
           ref={passwordInputRef}
         />
+        {passwordError && <p className="error">{passwordError}</p>}
         <button type="submit" disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
         {errMsg && <p className="error">{errMsg}</p>}
-        <div className="register-link">
-          
+        <div className="forgot-password-link">
+          <Link to="/forgot-password">Forgot Password?</Link>
         </div>
       </form>
     </div>
-    </div>
-
   );
 };
 

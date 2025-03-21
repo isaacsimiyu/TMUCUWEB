@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {
   faImages,
   faBook,
@@ -14,6 +18,8 @@ import {
   faQuoteLeft,
   faChevronLeft,
   faChevronRight,
+  faMapMarkerAlt,
+  faCalendar
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -23,9 +29,19 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import avatar1 from "../../assets/testimonials/testimonial2.jpg";
+import avatar5 from "../../assets/testimonials/testimonial5.jpg";
 import avatar2 from "../../assets/testimonials/testimonial1.jpg";
 import avatar3 from "../../assets/testimonials/testimonial3.jpg";
+import avatar4 from "../../assets/testimonials/testimonial4.jpg";
+import avatar6 from "../../assets/testimonials/testimonial6.jpg";
+import avatar7 from "../../assets/testimonials/testimonial7.jpg";
+import avatar8 from "../../assets/testimonials/testimonial8.jpg";
+import avatar9 from "../../assets/testimonials/testimonial9.jpg";
 
+import event1 from "../../assets/events/event1.jpg";
+import event2 from "../../assets/events/event2.jpg";
+
+ 
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Header from "../../components/header/Header";
@@ -53,6 +69,86 @@ const Home = () => {
     { src: image5, description: "TMUCU Praise and Worship" },
   ];
 
+  const events = [
+    {
+      title: "MEGA NYAMIRA MISSION",
+      date: "27/4/2025",
+      location: "NYAMIRA, NYAMWETUREKO& B3",
+      description: "Join us for our ANNUAL MISSION",
+      image: event1,
+    },
+    {
+      title: "ELDERS Night 2025",
+      date: "21/3/2025",
+      location: "Chap Hall",
+      description: "Are you Ready for this?",
+      image: event2,
+    },
+  ];
+  
+
+
+  const testimonials = [
+    {
+      text: "TMUCU is the cream of Tom Mboya University. As a testament, Fellowshiping and serving in TMUCU has made an indelible mark in my life holistically. I’m forever indebted to God for TMUCU.",
+      name: "PETER",
+      role: "MEDIA CORD",
+      image: avatar9,
+    },
+    {
+      text: "Serving in the TMUCU Media Ministry has deepened my faith, refined my skills, and allowed me to glorify God through creativity, teamwork, and excellence in service. For sure, Our God Reigns!",
+      name: "Isaac Simiyu",
+      role: "Website Manager",
+      image: avatar2,
+    },
+    {
+      text: "Being TMUCU I have Experience God's unwevering presence through every trial and triump. The Christian Union has been a catalyst for deepening my faith, Providing a supportive community where I've Withnessed His Transformative power. ",
+      name: "Nancy Wakonyo",
+      role: "Former Chairperson M&L",
+      image: avatar1,
+    },
+    {
+      text: "TMUCU has helped me grow holistically and spiritually, providing sessions and friendships that enrich my life. I cherish my weekends at B1 church and consider this community a true blessing.",
+      name: "Malvin Clament",
+      role: "Former Media T",
+      image: avatar7,
+    },
+    {
+      text: "As a member of the TMUCU since 2021, I'm nearing the end of my undergraduate journey,and I am profoundly grateful for God's faithfulness. Throughout these years, He has graciously kept me in good health, despite the rigors of academic life. ",
+      name: "Alvin Saiguran",
+      role: "Member",
+      image: avatar4,
+    },
+    {
+      text: "In my cherished journey at TMUCU I've discovered more than just a community; I've found a loving family. The heartfelt interactions with it's member has nourished my spiritual growth, inspiring me to walk the Christ-centred path.",
+      name: "Austine Aligula",
+      role: "Member",
+      image: avatar3,
+    },
+    {
+      text: "I'm greatful to God for the growth I've gained in TMUCU serving in sub-comb and Exec provide unforgottenable lessons, and growing closer to God daily was the most remakable experience.",
+      name: "Lucy Wanjiku",
+      role: "Music coordinator",
+      image: avatar5,
+    },
+
+    {
+      text: "I am profoundly grateful to TMUCU, as it has significantly contributed to my holistic growth, particularly in the realms of spiritual enrichment and leadership development.I am genuinely humbled and deeply honored. ",
+      name: "Khatoro Derick",
+      role: "Ushering Chair",
+      image: avatar8,
+    },
+
+    {
+      text: "TMUCU is a source of joy and peace, fostering growth and deeper understanding of God. We should remember that our journey a head is beautiful because our God regns. ",
+      name: "Fredrick Ondiek",
+      role: "Media Literature",
+      image: avatar6,
+    },
+    
+  ];
+
+
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(true);
@@ -62,11 +158,46 @@ const Home = () => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
 
-    return () => {
+    return () => {    
       clearInterval(intervalId);
     };
   }, []);
 
+  const testimonialSliderSettings  = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, 
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, 
+    rtl: true, 
+    
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
+  };
+
+  const eventSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    rtl: false, // Change to false if needed
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
+  };
+  
+  
+  
   const prevImage = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -163,6 +294,30 @@ const Home = () => {
             </div>
           </div>
         </section>
+    {/* Upcoming Events Section */}
+<div className="events-container">
+  <h2 className="events-title">Upcoming Events</h2>
+  <p className="events-subtitle">These are our upcoming events</p>
+
+  {/* Events Slider */}
+  <Slider {...eventSliderSettings}>
+    {events.map((event, index) => (
+      <div key={index} className="event-card">
+        <img src={event.image} alt={event.title} className="event-image" />
+        <div className="event-details">
+          <h3>{event.title}</h3>
+          <p>
+            <FontAwesomeIcon icon={faCalendar} /> <strong>Happening:</strong> {event.date}
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> {event.location}
+          </p>
+          <p>{event.description}</p>
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
 
         <section className="welcome-section">
           <div className="welcome">
@@ -246,7 +401,7 @@ const Home = () => {
               <Col md={2} sm={4} xs={8}>
                 <div className="social-item">
                   <a
-                    href="https://www.facebook.com/groups/your-facebook-group-link"
+                    href="https://www.facebook.com/Tmu CU(Tmu Christian Union)"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -271,7 +426,7 @@ const Home = () => {
                     </div>
                     {/* Link to your Facebook group */}
                     <a
-                      href="https://www.facebook.com/tommboyaunicu"
+                      href="https://www.facebook.com/Tmu CU(Tmu Christian Union)"
                       target="_blank"
                     >
                       Visit our Facebook Page
@@ -359,7 +514,7 @@ const Home = () => {
                 <Col md={2} sm={4} xs={8}>
                 <div className="social-item">
                   <a
-                    href="https://www.tiktok.com/@tmu_cu"
+                    href="https://www.tiktok.com/@tmu_christian_union"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -371,7 +526,7 @@ const Home = () => {
                       <iframe
                         width="85"
                         height="105"
-                        src="https://www.tiktok.com/@tmu_cu"
+                        src="https://www.tiktok.com/@tmu_christian_union"
                         title="Tiktok video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -516,107 +671,30 @@ const Home = () => {
           </Container>
         </section>
 
-        <section className="testimonial-section">
-          <Container>
-            <Row>
-              <Col>
-                <h2>Testimonials</h2>
-              </Col>
-            </Row>
-            <Row className="testimonials">
-              <Col md={4} sm={6} xs={12}>
-                <div className="testimonial">
-                  <div className="avatar">
-                    <img src={avatar1} alt="" />
+      {/* Testimonial Section */}
+      <section className="testimonial-section">
+        <Container>
+          <h2 className="text-center">Our Members' Testimonies</h2>
+          <p className="text-center">
+            These are the testimonies of our members about the goodness of God in their lives.
+          </p>
+          <Slider {...testimonialSliderSettings}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial-card">
+                <p className="testimonial-text">"{testimonial.text}"</p>
+                <div className="testimonial-user">
+                  <img src={testimonial.image} alt={testimonial.name} className="testimonial-avatar" />
+                  <div>
+                    <h4 className="testimonial-name">{testimonial.name}</h4>
+                    <p className="testimonial-role">{testimonial.role}</p>
                   </div>
-                  <p>
-                    <FontAwesomeIcon
-                      icon={faQuoteLeft}
-                      className="quote-icon"
-                    />
-                    "As a member of the Tom Mboya University Christian Union,
-                    I've experienced God's unwavering presence through every
-                    trial and triumph. In moments of doubt, His reassurance
-                    steadies my heart. In times of joy, His love overflows. The
-                    Christian Union has been a catalyst for deepening my faith,
-                    providing a supportive community where I've witnessed His
-                    transformative power. Through it all, God's faithfulness
-                    remains my anchor, guiding me with grace and reminding me
-                    that I'm never alone."
-                    <FontAwesomeIcon
-                      icon={faQuoteRight}
-                      className="quote-icon"
-                    />
-                  </p>
-                  <p className="testimonial-info">
-                    <span className="name">Nancy Wakonyo</span> -{" "}
-                    <span className="role">Member</span>
-                  </p>
                 </div>
-              </Col>
-              <Col md={4} sm={6} xs={12}>
-                <div className="testimonial">
-                  <div className="avatar">
-                    <img src={avatar2} alt="" />
-                  </div>
-                  <p>
-                    <FontAwesomeIcon
-                      icon={faQuoteLeft}
-                      className="quote-icon"
-                    />
-                    As a member of the Tom Mboya University Christian Union
-                    since 2021, I'm nearing the end of my undergraduate journey,
-                    and I am profoundly grateful for God's faithfulness.
-                    Throughout these years, He has graciously kept me in good
-                    health, despite the rigors of academic life. It's a
-                    testament to His unwavering care and provision, for which I
-                    am deeply thankful.
-                    <FontAwesomeIcon
-                      icon={faQuoteRight}
-                      className="quote-icon"
-                    />
-                  </p>
-                  <p className="testimonial-info">
-                    <span className="name">Alvin Saiguran</span> -{" "}
-                    <span className="role">Member</span>
-                  </p>
-                </div>
-              </Col>
-              <Col md={4} sm={6} xs={12}>
-                <div className="testimonial">
-                  <div className="avatar">
-                    <img src={avatar3} alt="" />
-                  </div>
-                  <p>
-                    <FontAwesomeIcon
-                      icon={faQuoteLeft}
-                      className="quote-icon"
-                    />
-                    In my cherished journey at Tom Mboya University Christian
-                    Union, I've discovered more than just a community; I've
-                    found a loving family. The heartfelt interactions with its
-                    members have nourished my spiritual growth, inspiring me to
-                    walk the Christ-centered path. In our local language, we
-                    embrace the saying *'Obwaka buli okhusinga'*, which
-                    translates to 'Family is everything' in English,
-                    encapsulating the profound significance of family bonds.
-                    With gratitude and love, I share my experiences and extend
-                    heartfelt thanks to TMUCU."
-                    <FontAwesomeIcon
-                      icon={faQuoteRight}
-                      className="quote-icon"
-                    />
-                  </p>
-                  <p className="testimonial-info">
-                    <span className="name">Austine Aligula</span> -{" "}
-                    <span className="role">Member</span>
-                  </p>
-                </div>
-              </Col>
-              {/* Add more testimonials as needed */}
-            </Row>
-          </Container>
-        </section>
+              </div>
+            ))}
+          </Slider>
+        </Container>
+      </section>
+
         <section id="newsletter" className="section-p1 section-m1">
           <Container>
             <Row className="align-items-center">
@@ -688,5 +766,25 @@ const Home = () => {
     </div>
   );
 };
+const CustomPrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-prev-arrow" onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronLeft} />
+    </div>
+  );
+};
+
+const CustomNextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-next-arrow" onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronRight} />
+    </div>
+  );
+};
+
+
+
 
 export default Home;

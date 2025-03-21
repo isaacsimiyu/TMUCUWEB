@@ -48,7 +48,7 @@
 .contact-email {
   display: flex;
   align-items: center;
-  gap: 70px;
+  gap: 40px;
   justify-content: center;
 }
 
@@ -65,23 +65,30 @@
 
 /* Register Button Container */
 .register-btn-container {
-  margin-right: 20px;
+  
 }
 
-/* Register Button */
-.register-btn {
-  background-color: #e71d36;
+
+.register-btn, .login-btn {
+  padding: 5px 10px;
   border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  gap: 40px;
   cursor: pointer;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: #e71d36;
   font-family: "Poppins", sans-serif;
-  margin-right: 20px; /* Added margin-right to 20px */
+}
+.login-btn:hover{
+  background-color: #c1192b;
 }
 
 .register-btn:hover {
   background-color: #c1192b;
+}
+/* Flex container to keep buttons side by side on larger screens */
+.btn-container {
+  display: flex;
 }
 
 /* Section 2: Navbar */
@@ -220,9 +227,9 @@
     font-size: 14px; /* Reduced font size for smaller devices */
   }
 
-  .contact-email,
-  .register-btn {
+  .contact-email,.register-btn {
     display: none;
+    
   }
 
   /* Logo and Institution Name fill the entire space */
@@ -232,6 +239,15 @@
 
   .section-2 {
     text-align: left; /* Align text to the left */
+  }
+  .btn-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .register-btn, .login-btn {
+    width: 100%;
+    margin: 5px 0;
   }
 
   .navbar-nav .nav-link {

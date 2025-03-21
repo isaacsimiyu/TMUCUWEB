@@ -71,10 +71,50 @@
 .login-form-container .register-link a:hover {
   text-decoration: underline;
 }
+.forgot-password-link {
+  margin-top: 20px;
+}
 
-@media (max-width: 600px) {
+.forgot-password-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+/* Responsive styling for small screens */
+@media (max-width: 480px) {
   .login-form-container {
-    max-width: 100%;
-    margin: 0 20px;
+    padding: 30px 20px;
+  }
+
+  .login-form-container h1 {
+    font-size: 20px;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .forgot-password-link a {
+    font-size: 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+  
+  

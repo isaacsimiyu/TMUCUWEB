@@ -64,11 +64,11 @@ const Footer = () => {
             </p>
             <p>
               <strong>1st Service:</strong> <FontAwesomeIcon icon={faClock} />{" "}
-              6:50 AM - 9:15 AM
+              6:50 AM - 9:05 AM
             </p>
             <p>
               <strong>2nd Service:</strong> <FontAwesomeIcon icon={faClock} />{" "}
-              9:15 AM - 11:30 AM
+              9:05 AM - 11:30 AM
             </p>
           
           </Col>
@@ -122,7 +122,7 @@ const Footer = () => {
                 <a href="">
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a href="https://www.tiktok.com/@tmucu?_t=8gpq3ehzDok&_r=1">
+                <a href="https://www.tiktok.com/@tmu_christian_union?_t=8gpq3ehzDok&_r=1">
                   <FontAwesomeIcon icon={faTiktok} />
                 </a>
                 <a href="https://youtube.com/@tommboyaunichristianunion?si=8YQusBSS9lqwo5vE">
@@ -135,7 +135,7 @@ const Footer = () => {
       </Container>
       <div className="footer-bottom">
         <p>
-          &copy; 2023, TMUCCU. Developed by TMUCCU Media Team, Powered by the
+          &copy; 2024, TMUCCU. Developed by TMUCCU Media Team, Powered by the
           Grace of God.
         </p>
       </div>

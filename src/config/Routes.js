@@ -18,6 +18,8 @@ import Users from "../components/admin/adminpages/users/Users";
 import Contacts from "../components/admin/adminpages/contacts/Contacts ";
 import Subscribers from "../components/admin/adminpages/subscribers/Subscribers";
 import LoginForm from "../components/Login/LoginForm";
+
+import Forgottenpassword from "../components/forgottenpassword/Forgottenpassword";
 export const routes = [
   {
     path: "/header",
@@ -121,6 +123,12 @@ export const routes = [
     element: <LoginForm />,
     isPrivate: true,
   },
+  { 
+    path: "/forottenpassword",
+    element: <Forgottenpassword />,
+    isPrivate: false,
+  },
+ 
  
  
 ];
